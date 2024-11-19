@@ -1,0 +1,33 @@
+.header{
+    background: var(--white);
+    padding: 24px 38px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__info{
+
+}
+
+.header__info strong{
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+    color: var(--black);
+}
+
+.header__info span{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.control{
+    display: flex;
+    align-items: center;
+}
+
+.control__item:not(:last-child){
+    padding-right: 48px;
+    cursor: pointer;
+}

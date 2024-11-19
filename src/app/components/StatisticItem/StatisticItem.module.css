@@ -1,0 +1,65 @@
+.stc__item{
+    padding: 16px 26px 15px 28px;
+    background: var(--white);
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.stc__item .chart__container{
+    position: relative;
+    width: 187px;
+    height: 44px;
+}
+
+
+
+.stc__sum{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.stc__sum h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.stc__item .img{
+    background: #50D1B2;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stc__change{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.stc__change span{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.stc__change b{
+    font-size: 20px;
+    font-weight: 600;
+    color: #50D1B2;
+}
+
+.data__info{
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--gray);
+    padding-top: 17px;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,55 @@
+.aside{
+    background: var(--white);
+    padding: 34px 25px;
+}
+
+.aside .logo{
+    padding-bottom: 61px;
+}
+
+.aside .logo a{
+    display: flex;
+    align-items: center;
+}
+
+.aside .logo span{
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.nav__item{
+    padding: 20px;
+    border-radius: 12px;
+    list-style-type: none;
+}
+
+.nav__item a{
+    display: flex;
+    align-items: center;
+}
+
+.nav__item a svg > *{
+    stroke: var(--gray);
+}
+
+.nav__item span{
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray)
+}
+
+.nav__item.active{
+    background-color: var(--fiolet);
+}
+
+.nav__item.active a svg > *{
+    stroke: var(--white);
+}
+
+.nav__item.active span{
+    color: #fff;
+}

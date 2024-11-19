@@ -1,14 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #FFFFFF;
+  --black: #07070C;
+  --fiolet: #7364DB;
+  --main-bg: #E8EDF2;
+  --gray: #7E7E8F;
 }
 
-@media (prefers-color-scheme: dark) {
+
+/* @media (prefers-color-scheme: white) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --white: #FFFFFF;
+    --black: #07070C;
+    --fiolet: #7364DB;
+    --main-bg: #E8EDF2;
+    --gray: #7E7E8F;
   }
-}
+} */
 
 html,
 body {
@@ -17,9 +27,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -37,6 +45,11 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    color-scheme: white;
   }
+}
+
+.template{
+  display: grid;
+  grid-template-columns: 256px auto;
 }
