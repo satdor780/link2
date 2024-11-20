@@ -25,12 +25,12 @@ export const Sidebar = () => {
         {
             icon: TeamIcon,
             text: 'Команда',
-            path: '/team'
+            path: '/'
         },
         {
             icon: MapIcon,
             text: 'Локации',
-            path: '/map'
+            path: '/'
         },
     ]
 
