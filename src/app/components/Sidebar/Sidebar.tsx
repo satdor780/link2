@@ -30,7 +30,7 @@ export const Sidebar = () => {
         {
             icon: MapIcon,
             text: 'Локации',
-            path: '/location'
+            path: '/map'
         },
     ]
 
