@@ -1,13 +1,14 @@
 .stc__item{
-    padding: 16px 26px 15px 28px;
+    padding: 15px 28px;
     background: var(--white);
     border-radius: 16px;
     cursor: pointer;
+    margin-top: 125px;
 }
 
 .stc__item .chart__container{
     position: relative;
-    width: 80%;
+    width: 95%;
     height: 44px;
 }
 
@@ -17,13 +18,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .stc__sum h3{
     font-size: 24px;
     font-weight: 700;
     color: var(--black);
+    line-height: 24px;
 }
 
 .stc__item .img{
@@ -34,6 +36,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.stc__item:nth-child(2) .img{
+    background: #EC8C56;
+}
+
+.stc__item:nth-child(3) .img{
+    background: #7364DB;
 }
 
 .stc__change{
@@ -53,6 +63,15 @@
     font-size: 20px;
     font-weight: 600;
     color: #50D1B2;
+    line-height: 16px;
+}
+
+.stc__item:nth-child(2) .stc__change b{
+    color: #EC8C56;
+}
+
+.stc__item:nth-child(3) .stc__change b{
+    color: #7364DB;
 }
 
 .data__info{

@@ -1,26 +1,39 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, registerables } from 'chart.js';
+
+import { Chart as ChartJS, registerables, LinearScale, PointElement, LineElement, CategoryScale, Filler } from 'chart.js';
 
 ChartJS.register(...registerables);
 
 interface LineChartProps {
-  chartDate: number[]
+  chartDate: number[],
+  index?: number
 }
 
-const LineChart: React.FC<LineChartProps> = ({chartDate}) => {
+ChartJS.register(LinearScale, PointElement, LineElement, CategoryScale, Filler);
 
-    const type = chartDate[0] < chartDate[chartDate.length - 1]
+let lb = []
+
+for(let i = 0; i < 10; i++){
+  lb.push(i)
+}
+
+const LineChart: React.FC<LineChartProps> = ({chartDate, index}) => {
+
+  const colors = [ 'rgba(80, 209, 178, 1)', 'rgba(236, 140, 86, 1)', 'rgba(115, 100, 219, 1)',  'rgba(255, 0, 0, 1)']
+
+  // const type = chartDate[0] < chartDate[chartDate.length - 1]
 
   const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: lb,
     datasets: [
       {
         label: 'My First dataset',
         data: chartDate,
         fill: false,
-        borderColor: type ? 'rgba(11, 186, 116, 1)': 'rgba(252, 20, 20, 1)',
-        tension: 0.1,
+        pointBorderColor: 'transparent',
+        borderColor: colors[index ? index: 0],
+        tension: 0.4,
       },
     ],
   };

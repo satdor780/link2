@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.statistic__container}>
-          {statistic ? statistic.map(item => (
+          {statistic ? statistic.map((item, index) => (
             <StatisticItem 
               key={item.title}
               title={ item.title } 
@@ -18,6 +18,8 @@ export default function Home() {
               rpm={item.rpm} 
               icon={item.icons}
               chartDate={item.chartDate}
+              time={item.time}
+              index={index}
             />
           )): (
             <p>loading...</p>

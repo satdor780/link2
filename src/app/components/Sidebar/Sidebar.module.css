@@ -5,6 +5,7 @@
 
 .aside .logo{
     padding-bottom: 61px;
+    margin-left: 5px;
 }
 
 .aside .logo a{
@@ -21,7 +22,7 @@
 }
 
 .nav__item{
-    padding: 20px;
+    padding: 16px 21px;
     border-radius: 12px;
     list-style-type: none;
 }
@@ -29,6 +30,10 @@
 .nav__item a{
     display: flex;
     align-items: center;
+}
+
+.nav__item a svg{
+    height: 24px;
 }
 
 .nav__item a svg > *{
