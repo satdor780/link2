@@ -1,7 +1,5 @@
 'use client'
 
-import { useRouter } from "next/router"
-
 import Link from "next/link"
 import style from './Sidebar.module.css'
 import { HomeIcon } from "../icons/HomeIcon"
@@ -13,8 +11,6 @@ import { usePathname } from "next/navigation"
 export const Sidebar = () => {
 
     const pathname = usePathname(); 
-
-
 
     const links = [
         {

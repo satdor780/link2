@@ -12,28 +12,29 @@ interface LineChartProps {
 
 ChartJS.register(LinearScale, PointElement, LineElement, CategoryScale, Filler);
 
-let lb = []
+  const LineChart: React.FC<LineChartProps> = ({chartDate, index}) => {
 
-for(let i = 0; i < 10; i++){
-  lb.push(i)
-}
+    // const lb = chartDate.map((_, i) => i);
 
-const LineChart: React.FC<LineChartProps> = ({chartDate, index}) => {
-
-  const colors = [ 'rgba(80, 209, 178, 1)', 'rgba(236, 140, 86, 1)', 'rgba(115, 100, 219, 1)',  'rgba(255, 0, 0, 1)']
-
+    const colors = [
+      'rgba(80, 209, 178, 1)',
+      'rgba(236, 140, 86, 1)',
+      'rgba(115, 100, 219, 1)',
+      'rgba(255, 0, 0, 1)',
+    ];
   // const type = chartDate[0] < chartDate[chartDate.length - 1]
 
   const data = {
-    labels: lb,
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     datasets: [
       {
         label: 'My First dataset',
         data: chartDate,
         fill: false,
-        pointBorderColor: 'transparent',
+        pointBorderColor: colors[index ? index: 0],
         borderColor: colors[index ? index: 0],
         tension: 0.4,
+        labels: false,
       },
     ],
   };
@@ -41,12 +42,16 @@ const LineChart: React.FC<LineChartProps> = ({chartDate, index}) => {
   const options = {
     responsive: true,
     maintainAspectRatio: false,
+    radius: 0,
     plugins: {
       legend: {
         display: false,
       },
       title: {
         display: false, 
+      },
+      datalabels: {
+          display: false,
       },
     },
     scales: {

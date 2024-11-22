@@ -1,6 +1,6 @@
 'use client'
 
-import { StatisticItem } from "./components/StatisticItem/StatisticItem";
+import { StatisticItem } from "../components/StatisticItem/StatisticItem";
 import { useAppSelector } from "./hooks";
 import styles from "./page.module.css";
 

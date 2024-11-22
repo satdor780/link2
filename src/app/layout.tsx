@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Sidebar } from "./components/Sidebar/Sidebar";
-import { Header } from "./components/Header/Header";
-import { Providers } from "./components/redux/provider";
+import { Sidebar } from "../components/Sidebar/Sidebar";
+import { Header } from "../components/Header/Header";
+import { Providers } from "../components/redux/provider";
 
 export const metadata: Metadata = {
-  title: "самые ядрёные наркотики",
-  description: "меф, героин, грибы покупай и сдохни от передоза !",
+  title: "наркотики",
+  description: "меф, героин, грибы",
 };
 
 export default function RootLayout({

@@ -2,11 +2,20 @@ import Link from 'next/link'
 import style from './Header.module.css'
 
 export const Header = () => {
+
+    // const currentDate = new Date();
+
+    const formattedDate = new Date().toLocaleDateString('ru-RU', { 
+        day: 'numeric', 
+        month: 'long', 
+        year: 'numeric' 
+    });
+
     return(
         <header className={style.header}>
             <div className={style.header__info}>
                 <strong>Главная</strong>
-                <span>12 декабря, 2022 </span>
+                <span>{formattedDate}</span>
             </div>
             <div className={style.control}>
                 <Link href='/' className={style.control__item + ' ' + style.chats}>

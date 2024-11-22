@@ -25,6 +25,7 @@
     padding: 16px 21px;
     border-radius: 12px;
     list-style-type: none;
+    transition: all .3s ease;
 }
 
 .nav__item a{

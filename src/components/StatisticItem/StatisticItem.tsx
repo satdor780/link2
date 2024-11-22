@@ -21,28 +21,22 @@ export const StatisticItem: React.FC<StatisticItemProps> = ({
     index
 }) => {
 
-    const isoDateString = time ? time : '';
+    const isoDateString = time || '';
 
-    let result = ''
-
-    if(time){
+    const formattedDate = time ? (() => {
         const date = new Date(isoDateString);
-
-        const formattedDateDay = date.toLocaleDateString('ru-RU', { day: 'numeric' });
-        const formattedDateMon = date.toLocaleDateString('ru-RU', { month: 'long' });
+        const formattedDay = date.toLocaleDateString('ru-RU', { day: 'numeric' });
+        const formattedMonth = date.toLocaleDateString('ru-RU', { month: 'long' });
+        
+        return `По сравнению с ${formattedDay} ${formattedMonth}`;
+    })() : '';
     
-        result = `По сравнению с ${formattedDateDay} ${formattedDateMon}`;
-    }
-
-    
-
-
     const abbreviateNumber = (num: number) => {
-        if (num < 1e3) return num; 
-        if (num >= 1e6) return (num / 1e6).toFixed(0) + ' M';
-        if (num >= 1e3) return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' '); 
+        // if (num < 1000) return num.toString();
+        if (num < 1e6) return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        return (num / 1e6).toFixed(0) + ' M';
     };
-
+    
     return(
         <div className={styles.stc__item}>
             <div className={styles.stc__sum}>
@@ -61,7 +55,7 @@ export const StatisticItem: React.FC<StatisticItemProps> = ({
             </div>
 
             <span className={styles.data__info}>
-                {result}
+                {formattedDate}
             </span>
         </div>
     )
